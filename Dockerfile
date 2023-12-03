@@ -4,5 +4,6 @@ MAINTAINER Juhoon Kim <kimjuhoon@gmail.com>
 WORKDIR /home
 
 USER root
-RUN apt-get update
-RUN apt-get install -y apt-get install libzmq3-dev
+RUN apt update
+RUN apt install -y build-essential python-dev python3
+RUN apt install -y apt-get install libzmq3-dev
