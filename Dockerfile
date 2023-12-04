@@ -7,6 +7,8 @@ USER root
 RUN mkdir -p /opt/scripts && \
   cd /opt/scripts && \
   apt update && apt upgrade -y && \
-  apt install -y python3-minimal python3-pip libzmq3-dev && \
+  apt install -y --no-install-recommends python3-minimal python3-pip libzmq3-dev && \
+  apt clean && \
+  rm -rf /var/lib/apt/lists/* && \
   cat "#!/bin/bash" > start.sh && \
   bash start.sh
