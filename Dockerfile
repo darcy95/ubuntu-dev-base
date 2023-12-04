@@ -10,5 +10,5 @@ RUN mkdir -p /opt/scripts && \
   apt install -y --no-install-recommends python3-minimal python3-pip libzmq3-dev && \
   apt clean && \
   rm -rf /var/lib/apt/lists/* && \
-  cat "#!/bin/bash" > start.sh && \
+  echo "#!/bin/bash" > start.sh && \
   bash start.sh
