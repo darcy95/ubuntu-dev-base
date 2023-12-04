@@ -8,4 +8,5 @@ RUN mkdir -p /opt/scripts && \
   cd /opt/scripts && \
   apt update && apt upgrade -y && \
   apt install -y python3-minimal python3-pip libzmq3-dev && \
+  cat "#!/bin/bash" > start.sh && \
   bash start.sh
