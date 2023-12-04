@@ -4,6 +4,6 @@ MAINTAINER Juhoon Kim <kimjuhoon@gmail.com>
 WORKDIR /home
 
 USER root
-RUN apt update
-RUN apt install -y build-essential python-dev python3
-RUN apt install -y apt-get install libzmq3-dev
+RUN apt update && apt upgrade -y
+RUN apt install -y openssh-server build-essential python3 git
+RUN apt install -y libzmq3-dev
