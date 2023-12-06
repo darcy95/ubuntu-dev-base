@@ -8,6 +8,4 @@ RUN apt update && apt upgrade -y && \
   rm -rf /var/lib/apt/lists/* && \
   mkdir -p /opt/scripts
 
-COPY start.sh /opt/scripts/
-RUN chmod +x /opt/scripts/start.sh && cat /opt/scripts/start.sh
-CMD ["/bin/bash", "/opt/scripts/start.sh"]  
+CMD ["bash", "/opt/scripts/start.sh"]  
